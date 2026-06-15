@@ -25,6 +25,7 @@ public class MainFrame extends JFrame {
         contenedor.add(new PanelAgente().getMainPanel(), "agente");
         contenedor.add(new PanelBuscarVuelos().getMainPanel(), "buscarVuelos");
         contenedor.add(new PanelNuevaReserva().getMainPanel(), "nuevaReserva");
+        contenedor.add(new PanelMisReservas().getMainPanel(),  "misReservas");
 
         // Menú lateral (oculto al inicio)
         menuLateral = crearMenuLateral();
@@ -49,6 +50,7 @@ public class MainFrame extends JFrame {
         JButton btnReportes = new JButton("Reportes");
         JButton btnAgente = new JButton("Gestion Agente");
         JButton btnBuscarVuelos = new JButton("Buscar vuelos");
+        JButton btnMisReservas  = new JButton("Mis reservas");
         JButton btnCerrarSesion = new JButton("Cerrar sesion");
 
         btnVuelos.addActionListener(e -> mostrarPanel("vuelos"));
@@ -58,6 +60,7 @@ public class MainFrame extends JFrame {
         btnReportes.addActionListener(e -> mostrarPanel("reportes"));
         btnAgente.addActionListener(e -> mostrarPanel("agente"));
         btnBuscarVuelos.addActionListener(e -> mostrarPanel("buscarVuelos"));
+        btnMisReservas .addActionListener(e -> mostrarPanel("misReservas"));
         btnCerrarSesion.addActionListener(e -> cerrarSesion());
 
         menu.add(btnVuelos);
@@ -67,6 +70,7 @@ public class MainFrame extends JFrame {
         menu.add(btnReportes);
         menu.add(btnAgente);
         menu.add(btnBuscarVuelos);
+        menu.add(btnMisReservas);
         menu.add(Box.createVerticalGlue());
         menu.add(btnCerrarSesion);
 
