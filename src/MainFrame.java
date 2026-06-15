@@ -24,6 +24,7 @@ public class MainFrame extends JFrame {
         contenedor.add(new PanelReportes().getMainPanel(), "reportes");
         contenedor.add(new PanelAgente().getMainPanel(), "agente");
         contenedor.add(new PanelBuscarVuelos().getMainPanel(), "buscarVuelos");
+        contenedor.add(new PanelNuevaReserva().getMainPanel(), "nuevaReserva");
 
         // Menú lateral (oculto al inicio)
         menuLateral = crearMenuLateral();
