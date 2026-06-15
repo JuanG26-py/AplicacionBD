@@ -36,7 +36,7 @@ public class LoginPanel extends JPanel{
         switch(rol){
             case "Administrador" -> frame.iniciarSesionExitosa("vuelos");
             case "Agente" -> frame.iniciarSesionExitosa("agente");
-            case "Cliente" -> frame.iniciarSesionExitosa("vuelos"); // ajustar cuando tu compañero tenga sus paneles
+            case "Cliente" -> frame.iniciarSesionExitosa("buscarVuelos");
             default -> JOptionPane.showMessageDialog(mainPanel, "Seleccione un rol");
         }
     }
