@@ -15,7 +15,9 @@ public class LoginPanel extends JPanel{
         this.frame = frame;
 
         setLayout(new java.awt.BorderLayout());
-        add(mainPanel, BorderLayout.CENTER);
+        add(mainPanel, java.awt.BorderLayout.CENTER);
+
+        comboBox1.setModel(new DefaultComboBoxModel(new String[]{"Administrador", "Agente", "Cliente"}));
 
         INICIARSESIONButton.addActionListener(e -> iniciarSesion());
         SALIRButton.addActionListener(e -> System.exit(0));
@@ -32,9 +34,9 @@ public class LoginPanel extends JPanel{
         }
 
         switch(rol){
-            case "Administrador" -> frame.mostrarPanel("admin");
-            case "Agente" -> frame.mostrarPanel("agente");
-            case "Cliente" -> frame.mostrarPanel("cliente");
+            case "Administrador" -> frame.iniciarSesionExitosa("vuelos");
+            case "Agente" -> frame.iniciarSesionExitosa("agente");
+            case "Cliente" -> frame.iniciarSesionExitosa("vuelos"); // ajustar cuando tu compañero tenga sus paneles
             default -> JOptionPane.showMessageDialog(mainPanel, "Seleccione un rol");
         }
     }
